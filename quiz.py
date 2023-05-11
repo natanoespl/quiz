@@ -1,6 +1,6 @@
 print("Seja bem vindo ao meu QUIZ!")
 
-nome = input("Antes de tudo, qual o seu nome? ")
+nome = input("Antes de começarmos, qual o seu nome? ")
 print("Olá, " +nome)
 
 jogando = input("Você quer jogar? ")
@@ -39,12 +39,13 @@ if resposta.lower() == "power supply":
 else:
     print("Incorreto!")    
 
-if score <= 1: 
-    print("Parabéns," ,nome, ("você acertou " + str(score) + " questão!"))
-    print("A sua porcentagem de acertos foi de: " +str((score / 3) * 100) + "%.")
-else:
-    print("Parabéns," ,nome, ("você acertou " + str(score) + " questões!"))
-    print("A sua porcentagem de acerto foi de: " +str((score / 3) * 100) + "%.")
+if score > 1: 
+    print("Parabéns," ,nome, "você acertou " + str(score) + " questões!")
+    print("A sua porcentagem de acertos foi de: " +str((score / 4) * 100) + "%.")
 
-if score < 1:
-    print ("Infelizmente você errou todas as questões!")
+elif score == 1:
+    print("Parabéns," ,nome, "você acertou " +str(score) + " questão")
+    print("A sua porcentagem de acertos foi de: " +str((score / 4) * 100) + "%.")
+
+else:
+    print("Infelizmente você errou todas as questões!")
